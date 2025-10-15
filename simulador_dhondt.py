@@ -154,11 +154,7 @@ with c2:
     else:
         st.table(winners.set_index("Partido"))
 
-st.subheader("📑 Tabla con porcentajes y escaños")
-st.dataframe(
-    df.sort_values("Votos", ascending=False).set_index("Partido")[["Votos","%","Escaños"]],
-    use_container_width=True
-)
+
 
 # ---------------- Cuadro de cocientes ÷1..÷4 con top-4 resaltado ----------------
 st.subheader("🔍 Cocientes D’Hondt por partido (÷1, ÷2, ÷3, ÷4)")
